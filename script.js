@@ -138,7 +138,7 @@ function Redirect() {
       </tr>`;
     }
   
-    console.log(getCartList);
+    // console.log(getCartList);
   };
   
   productDetailPage = (data) => {
@@ -146,14 +146,31 @@ function Redirect() {
     location.assign("sproduct.html");
     console.log(data.name);
   };
+
   
   addToCart = (data) => {
     // localStorage.setItem("data", JSON.stringify(data));
     cart.push(data);
     localStorage.cart = JSON.stringify(cart);
-  
     alert(`${data.name} is added to cart`);
   };
+
+  total= ()=>{
+      var getCartList = JSON.parse(localStorage.cart);
+      localStorage.cart = JSON.stringify(getCartList);
+      console.log(localStorage.cart);
+      var tot=0;
+      for (let i = 0; i < getCartList.length; i++) {
+        console.log(getCartList[i].price);
+        var num = parseInt(getCartList[i].price);
+        tot+=num;
+      };
+      // console.log(tot);
+      var str = tot.toString();
+      // console.log(str);
+      document.getElementById("finale").innerHTML="&#8377;" + str;
+      document.getElementById("finale2").innerHTML="&#8377;" + str;
+  }
   
   getData = () => {
     for (let i = 0; i < data.length; i++) {
