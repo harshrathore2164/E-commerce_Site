@@ -56,6 +56,8 @@ function Redirect() {
   showProductDetailData = () => {
     let productData = localStorage.getItem("data");
     var data = JSON.parse(productData);
+
+   
   
     document.getElementById(
       "prodetails"
@@ -127,7 +129,7 @@ function Redirect() {
     // let productData = localStorage.getItem("data");
     // var data = JSON.parse(productData);
     // cart.push({ id: data.id, name: data.name, img: data.url, price: data.price });
-  
+    if(getCartList.length>0){
     for (let i = 0; i < getCartList.length; i++) {
       document.getElementsByClassName("details")[0].innerHTML += `<tr>
         <!-- <td><i class="far fa-times-cirle"><a href="#"></a></i></td> -->
@@ -137,6 +139,10 @@ function Redirect() {
         <td>${getCartList[i].price}</td>
       </tr>`;
     }
+  }
+  else{
+    document.getElementsByClassName("details")[0].innerHTML = `<h2 style="text-align: center; margin: 20px; padding: 10px;">The cart is empty !</h2>`;
+  }
   
     // console.log(getCartList);
   };
