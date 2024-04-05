@@ -11,7 +11,6 @@ Welcome to our eCommerce website project! This website allows users to browse an
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Technologies Used
 
@@ -66,10 +65,6 @@ We welcome contributions from the community! If you'd like to contribute to the 
 2. Make your changes.
 3. Submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgements
 
 We would like to thank the following resources for their contributions to this project:
@@ -78,5 +73,3 @@ We would like to thank the following resources for their contributions to this p
 - Images from Unsplash
 
 ---
-
-Feel free to modify and customize this README file according to your project's specific details and requirements.
